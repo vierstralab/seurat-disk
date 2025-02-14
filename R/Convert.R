@@ -363,16 +363,16 @@ H5ADToH5Seurat <- function(
     return(invisible(x = NULL))
   }
   ds.map <- c(
-    scale.data = if (inherits(x = source[['X']], what = 'H5D')) {
-      'X'
-    } else {
-      NULL
-    },
-    data = if (inherits(x = source[['X']], what = 'H5D') && source$exists(name = 'raw')) {
-      'raw/X'
-    } else {
-      'X'
-    },
+    # scale.data = if (inherits(x = source[['X']], what = 'H5D')) {
+    #   'X'
+    # } else {
+    #   NULL
+    # },
+    # data = if (inherits(x = source[['X']], what = 'H5D') && source$exists(name = 'raw')) {
+    #   'raw/X'
+    # } else {
+    #   'X'
+    # },
     counts = if (source$exists(name = 'raw')) {
       'raw/X'
     } else {
